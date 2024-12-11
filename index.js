@@ -6,7 +6,7 @@ const app = express();
 // Proxy endpoint
 app.get('/proxy/swagger.json', async (req, res) => {
     try {
-        const response = await axios.get('https://horoscope-app-api.vercel.app/api/v1/swagger.json');
+        const response = await axios.get('https://horoscope-app-api.vercel.app');
         res.json(response.data);  // Forward the Swagger JSON data
     } catch (error) {
         res.status(500).send('Error fetching Swagger JSON');
